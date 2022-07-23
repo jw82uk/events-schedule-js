@@ -15,7 +15,7 @@ A simple but flexible way to create an auto-updating schedule of events.
 
 ## Demo
 
-Link here...
+https://jw82uk.github.io/events-schedule-js/
 
 ## About
 

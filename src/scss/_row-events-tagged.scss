@@ -1,0 +1,83 @@
+.es-tagged {
+    background-color: black;
+    color: white;
+
+    a {
+        color: $blue-light;
+    }
+
+    .events-schedule {
+        padding-top: 50px;
+
+        .slick-track {
+            display: flex;
+        }
+        &__event {
+            align-content: stretch;
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            padding: 0 10px;
+            transform: scale(1);
+            transition: all ease 0.6s;
+            
+        }
+        &__img-wrapper {
+            padding-bottom: 10px;
+        }
+        &__img {
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        &__details {
+            flex: 1;
+        }
+        &__status--live,
+        &__status--live {
+            border-color: $green-turquoise;
+            color: $green-turquoise;
+        }
+        &__link--secondary {
+            background-color: darken($color: $blue, $amount: 5);
+            color: white;
+            text-align: center;
+
+            @media screen and (min-width: $small) {
+                margin-top: auto;
+            }
+
+            &:hover,
+            &:focus {
+                background-color: darken($color: $purple, $amount: 20);
+            }
+        }
+    }
+
+    .slick-list {
+        overflow: visible;
+    }
+
+    .slick-dots {
+        li {
+            button {
+                &:hover,
+                &:focus {
+                    &:before {
+                        color: $blue;
+                    }
+                }
+            }
+            &.slick-active {
+                button {
+                    &:before {
+                        color: $green-turquoise;
+                    }
+                }
+            }
+        }
+    }
+
+    .slick-slide[aria-hidden="true"] {
+        opacity: 0.2!important;
+        transform: scale(0.9);
+    }
+}

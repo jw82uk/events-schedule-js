@@ -1,0 +1,233 @@
+{
+    "events": [
+        {
+            "event_title": "Ut excepturi impedit vel Quis",
+            "event_start": "Feb 08 2022 11:30:00 GMT+0000",
+            "event_end": "April 08 2052 11:30:00 GMT+0100",
+            "event_desc_html": "<p>Ut excepturi impedit vel Quis saepe eos consectetur atque in modi beatae. In enim unde id iste autem et voluptas amet At tempore pariatur quo unde galisum quo voluptatibus nihil vel architecto voluptas? Ea maxime dolorem ea culpa fuga sit quas optio aut dolore consectetur ut nostrum distinctio et voluptas voluptatem.</p>",
+            "event_type": "Workshop",
+            "primary_link_text": "Enim unde...",
+            "primary_link_aria_label": "",
+            "primary_link_url": "#",
+            "secondary_link_text": "Join now",
+            "secondary_link_aria_label": "",
+            "secondary_link_url": "#",
+            "tags": [
+                "arts"
+            ],
+            "img_path": "assets/img/arts/arts3.jpg",
+            "img_alt": "Close up of woman's face",
+            "custom_class": ""
+        },
+        {
+            "event_title": "A voluptas fugiat rem fugit enim sit",
+            "event_start": "April 08 2052 10:30:00 GMT+0100",
+            "event_end": "April 08 2052 12:00:00 GMT+0100",
+            "event_desc_html": "<p>A voluptas fugiat rem fugit enim sit repellendus quisquam. Et dolor debitis et perferendis cupiditate aut sint dolorem et animi rerum quo mollitia aut iure iure 33 quasi internos. Quo dolorem perferendis id perferendis quis quo voluptatem quod cum animi itaque ab omnis omnis qui quibusdam dignissimos ut tempore asperiores.</p>",
+            "event_type": "Seminar",
+            "primary_link_text": "Enim unde...",
+            "primary_link_aria_label": "",
+            "primary_link_url": "#",
+            "secondary_link_text": "Join now",
+            "secondary_link_aria_label": "",
+            "secondary_link_url": "#",
+            "tags": [
+                "arts"
+            ],
+            "img_path": "assets/img/arts/arts4.jpg",
+            "img_alt": "Abstract art",
+            "custom_class": ""
+        },
+        {
+            "event_title": "Aliquam ac erat non urna hendrerit accumsan",
+            "event_start": "Feb 08 2022 11:30:00 GMT+0000",
+            "event_end": "April 08 2052 11:30:00 GMT+0100",
+            "event_desc_html": "<p>Phasellus nec ultricies est. Aliquam a volutpat velit, sed imperdiet ligula. Aliquam dapibus ante ac sem posuere porta. Cras id eros viverra, ornare sem ac, dapibus eros. Suspendisse tincidunt augue sed ornare egestas.</p>",
+            "event_type": "Theatre",
+            "primary_link_text": "Enim unde...",
+            "primary_link_aria_label": "",
+            "primary_link_url": "#",
+            "secondary_link_text": "Join now",
+            "secondary_link_aria_label": "",
+            "secondary_link_url": "#",
+            "tags": [
+                "entertainment"
+            ],
+            "img_path": "assets/img/entertainment/entertainment1.jpg",
+            "img_alt": "Five people sitting on a red sofa",
+            "custom_class": ""
+        },
+        {
+            "event_title": "Pellentesque pulvinar eros justo, sed rhoncus mauris blandit tempor",
+            "event_start": "June 08 2052 09:30:00 GMT+0100",
+            "event_end": "June 08 2052 10:00:00 GMT+0100",
+            "event_desc_html": "<p>Nam tincidunt, orci nec condimentum feugiat, risus ex feugiat ex, sit amet dictum lectus lacus a metus. Donec eu libero dui. Donec commodo quam id turpis viverra laoreet. Cras consequat metus quis dui vestibulum venenatis.</p>",
+            "event_type": "Stand-up comedy",
+            "primary_link_text": "Enim unde...",
+            "primary_link_aria_label": "",
+            "primary_link_url": "#",
+            "secondary_link_text": "Join now",
+            "secondary_link_aria_label": "",
+            "secondary_link_url": "#",
+            "tags": [
+                "entertainment"
+            ],
+            "img_path": "assets/img/entertainment/entertainment2.jpg",
+            "img_alt": "A lady standing in front of lights, looking at her fingernails",
+            "custom_class": ""
+        },
+        {
+            "event_title": "Aenean interdum egestas enim at euismod",
+            "event_start": "April 08 2052 10:30:00 GMT+0100",
+            "event_end": "April 08 2052 12:00:00 GMT+0100",
+            "event_desc_html": "<p>Maecenas luctus lacus a purus vulputate, vitae cursus lectus accumsan. Proin porta posuere enim nec tincidunt. Sed nisi lacus, iaculis vitae auctor eget, ullamcorper quis libero. Suspendisse libero lorem, consectetur quis fermentum sit amet, sagittis a enim.</p>",
+            "event_type": "Live show",
+            "primary_link_text": "Enim unde...",
+            "primary_link_aria_label": "",
+            "primary_link_url": "#",
+            "secondary_link_text": "Join now",
+            "secondary_link_aria_label": "",
+            "secondary_link_url": "#",
+            "tags": [
+                "entertainment"
+            ],
+            "img_path": "assets/img/entertainment/entertainment3.jpg",
+            "img_alt": "A young lady giving another young lady a piggyback",
+            "custom_class": ""
+        },
+        {
+            "event_title": "Pellentesque habitant morbi tristique senectus et netus",
+            "event_start": "April 08 2052 10:30:00 GMT+0100",
+            "event_end": "April 08 2052 11:30:00 GMT+0100",
+            "event_desc_html": "<p>Morbi porttitor, ex et bibendum luctus, orci sem vehicula odio, a dignissim ex enim euismod metus. Nulla varius ligula sed pulvinar vestibulum.</p>",
+            "event_type": "Live show",
+            "primary_link_text": "Enim unde...",
+            "primary_link_aria_label": "",
+            "primary_link_url": "#",
+            "secondary_link_text": "Join now",
+            "secondary_link_aria_label": "",
+            "secondary_link_url": "#",
+            "tags": [
+                "entertainment"
+            ],
+            "img_path": "assets/img/entertainment/entertainment5.jpg",
+            "img_alt": "A young lady jumping up in the air in front of bright lights",
+            "custom_class": ""
+        },
+        {
+            "event_title": "Donec luctus turpis pellentesque ligula tincidunt malesuada",
+            "event_start": "June 08 2052 10:30:00 GMT+0100",
+            "event_end": "June 08 2052 11:00:00 GMT+0100",
+            "event_desc_html": "<p>Suspendisse ante felis, imperdiet nec mattis ac, facilisis nec magna. Nulla ante dolor, dapibus id tempor tempor, aliquam ut magna. Donec quis odio volutpat, aliquet libero non, porta risus. Vivamus ut erat vel ante laoreet consequat ac id felis.</p>",
+            "event_type": "Workshop",
+            "primary_link_text": "Enim unde...",
+            "primary_link_aria_label": "",
+            "primary_link_url": "#",
+            "secondary_link_text": "Join now",
+            "secondary_link_aria_label": "",
+            "secondary_link_url": "#",
+            "tags": [
+                "science"
+            ],
+            "img_path": "assets/img/science/science2.jpg",
+            "img_alt": "A skull",
+            "custom_class": ""
+        },
+        {
+            "event_title": "Suspendisse tincidunt tortor",
+            "event_start": "Feb 08 2022 11:30:00 GMT+0000",
+            "event_end": "April 08 2052 11:30:00 GMT+0100",
+            "event_desc_html": "<p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin id metus volutpat, bibendum urna sed, laoreet felis. Donec magna nisi, interdum nec semper eu, malesuada at elit. Aenean eget sem non est condimentum blandit. Vestibulum sed lacus in nisl dictum blandit. </p>",
+            "event_type": "Lecture",
+            "primary_link_text": "Enim unde...",
+            "primary_link_aria_label": "",
+            "primary_link_url": "#",
+            "secondary_link_text": "Join now",
+            "secondary_link_aria_label": "",
+            "secondary_link_url": "#",
+            "tags": [
+                "science"
+            ],
+            "img_path": "assets/img/science/science1.jpg",
+            "img_alt": "A female astronaut",
+            "custom_class": ""
+        },
+        {
+            "event_title": "Nulla facilisi",
+            "event_start": "April 08 2052 10:30:00 GMT+0100",
+            "event_end": "April 08 2052 12:00:00 GMT+0100",
+            "event_desc_html": "<p>Etiam ut libero nec nunc posuere porta. Integer non vestibulum eros. Integer interdum, magna vitae lobortis euismod, leo magna commodo ante, eget consequat orci justo ut tellus. Morbi faucibus nec arcu nec mattis.</p>",
+            "event_type": "Lecture",
+            "primary_link_text": "Enim unde...",
+            "primary_link_aria_label": "",
+            "primary_link_url": "#",
+            "secondary_link_text": "Join now",
+            "secondary_link_aria_label": "",
+            "secondary_link_url": "#",
+            "tags": [
+                "science"
+            ],
+            "img_path": "assets/img/science/science3.jpg",
+            "img_alt": "An illustration of the birth of the solar system",
+            "custom_class": ""
+        },
+        {
+            "event_title": "Aliquam porta non arcu eget dapibus",
+            "event_start": "Feb 08 2022 11:30:00 GMT+0000",
+            "event_end": "April 08 2052 11:30:00 GMT+0100",
+            "event_desc_html": "<p>Suspendisse cursus in turpis ut mattis. Phasellus vel tempus nibh. Donec ut magna auctor, laoreet eros eu, accumsan metus. Integer turpis urna, pellentesque eu quam at, gravida posuere neque. </p>",
+            "event_type": "Conference",
+            "primary_link_text": "Enim unde...",
+            "primary_link_aria_label": "",
+            "primary_link_url": "#",
+            "secondary_link_text": "Join now",
+            "secondary_link_aria_label": "",
+            "secondary_link_url": "#",
+            "tags": [
+                "technology"
+            ],
+            "img_path": "assets/img/technology/technology3.jpg",
+            "img_alt": "A woman with bright, colourful lights projected onto her",
+            "custom_class": ""
+        },
+        {
+            "event_title": "Cras iaculis, velit ut luctus aliquet",
+            "event_start": "April 08 2052 10:30:00 GMT+0100",
+            "event_end": "April 08 2052 12:00:00 GMT+0100",
+            "event_desc_html": "<p>Ut vel imperdiet mauris. Nunc dui ex, laoreet eget efficitur nec, rutrum et magna. Aenean in risus id velit euismod imperdiet. Fusce placerat lacus in quam ultricies luctus. Vivamus pretium gravida elementum.</p>",
+            "event_type": "Lecture",
+            "primary_link_text": "Enim unde...",
+            "primary_link_aria_label": "",
+            "primary_link_url": "#",
+            "secondary_link_text": "Join now",
+            "secondary_link_aria_label": "",
+            "secondary_link_url": "#",
+            "tags": [
+                "technology"
+            ],
+            "img_path": "assets/img/technology/technology1.jpg",
+            "img_alt": "A man wearing a virtual reality headset",
+            "custom_class": ""
+        },
+        {
+            "event_title": "Proin hendrerit libero vitae dignissim auctor",
+            "event_start": "April 08 2052 11:00:00 GMT+0100",
+            "event_end": "April 08 2052 12:00:00 GMT+0100",
+            "event_desc_html": "<p>Duis at vehicula sapien. Vestibulum non dui nisl. Maecenas sollicitudin dignissim leo, ut interdum quam cursus eget. Proin metus neque, vulputate in dignissim nec, consectetur at lectus. Mauris accumsan tincidunt nisl a fringilla.</p>",
+            "event_type": "Tour",
+            "primary_link_text": "Enim unde...",
+            "primary_link_aria_label": "",
+            "primary_link_url": "#",
+            "secondary_link_text": "Join now",
+            "secondary_link_aria_label": "",
+            "secondary_link_url": "#",
+            "tags": [
+                "technology",
+                "science"
+            ],
+            "img_path": "assets/img/technology/technology5.jpg",
+            "img_alt": "A scientist next to the James Webb space telescope",
+            "custom_class": ""
+        }
+    ]
+}

@@ -1,0 +1,69 @@
+// All events
+.es-standard {
+    .events-schedule {
+        &__count {
+            padding-bottom: 40px;
+        }
+        &__timezone-msg {
+            padding-bottom: 20px;
+        }
+        &__events-wrapper {
+            display: grid;
+            gap: 30px;
+            grid-template-columns: 1fr;
+
+            @media screen and (min-width: $small) {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            @media screen and (min-width: $wide) {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+        &__event {
+            @include drop-shadow;
+            background-color: white;
+            border-radius: 10px;
+        }
+        &__img {
+            border-radius: 10px 10px 0 0;
+        }
+        &__description {
+            display: flex;
+            flex-direction: column;
+        }
+        &__details {
+            padding: 20px;
+        }
+        &__status--live,
+        &__status--soon {
+            color: $red;
+        }
+        &__link--secondary {
+            background-color: $red;
+            border-radius: 3px;
+            color: white;
+            text-align: center;
+
+            &:hover,
+            &:focus {
+                background-color: darken($color: $purple, $amount: 20);
+            }
+        }
+        // Live events
+        &__event--present {
+            display: flex;
+            flex-direction: column;
+
+            .events-schedule__details {
+                display: flex;
+                flex: 1;
+                flex-direction: column;
+            }
+
+            .events-schedule__link--secondary {
+                margin-top: auto;
+            }
+        }
+    }
+}

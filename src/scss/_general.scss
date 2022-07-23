@@ -1,0 +1,278 @@
+html {
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+    scroll-behavior: smooth;
+}
+
+body {
+    color: #333333;
+    font-size: 1.6rem;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.sr-only {
+	border: 0 !important;
+	clip: rect(1px, 1px, 1px, 1px) !important;
+	-webkit-clip-path: inset(50%) !important;
+		clip-path: inset(50%) !important;
+	height: 1px !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	padding: 0 !important;
+	position: absolute !important;
+	width: 1px !important;
+	white-space: nowrap !important;
+}
+
+.page-title {
+    font-size: 5rem;
+    font-weight: 900;
+    margin: 0;
+    padding: 0 0 10px 0;
+
+    &--mobile {
+        line-height: 1.2;
+
+        span {
+            display: block;
+        }
+
+        // Above small
+        @media screen and (min-width: calc($small + 1px) ) {
+            font-size: 7rem;
+        }
+        
+        // Above medium
+        @media screen and (min-width: calc($medium + 1px) ) {
+            display: none;
+        }
+    }
+
+    &--desktop {
+
+        // Below medium
+        @media screen and (max-width: $medium) {
+            display: none;
+        }
+
+        // Above medium
+        @media screen and (min-width: $medium) {
+            font-size: 8.5rem;
+        }
+    }
+}
+
+h2 {
+    font-size: 5rem;
+    font-weight: 900;
+    line-height: 1.1;
+    margin: 0;
+    padding: 0 0 30px 0;
+
+    // Above small
+    @media screen and (min-width: $small) {
+        font-size: 7rem;
+    }
+}
+
+h3 {
+    font-size: 4rem;
+    margin: 0;
+    padding: 0;
+}
+
+p, label, select {
+    font-size: 1.7rem;
+    margin: 0;
+    padding: 0 0 10px 0;
+
+    // Above small
+    @media screen and (min-width: $small) {
+        font-size: 2rem;
+    }
+}
+
+a {
+    color: $blue;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all ease 0.3s;
+
+    &:hover,
+    &:focus {
+        color: $purple;
+        text-decoration: underline;
+    }
+}
+
+.row {
+    overflow: hidden;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 75px 25px 100px 25px;
+    position: relative;
+}
+
+.text-center {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 700px;
+}
+
+.text-gradient {
+    &--blue {
+        background: -webkit-linear-gradient(-70deg, $blue 30%, $green-turquoise 70%);
+        @include text-gradients;
+    }
+
+    &--orange {
+        background: -webkit-linear-gradient(70deg, $orange 0%, $red 100%);
+        @include text-gradients;
+    }
+
+    &--red {
+        background: -webkit-linear-gradient(-70deg, $purple 0%, $red 100%);
+        @include text-gradients;
+    }
+}
+
+.events-filter {
+    margin: 40px 0;
+
+    &__label {
+        font-weight: bold;
+    }
+
+    select {
+        display: inline-block;
+        padding: 5px;
+    }
+}
+
+.events-schedule {
+    &__event {
+        position: relative;
+        text-align: left;
+    }
+    &__details {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    &__type {
+        font-size: 1.3rem;
+        margin: 0;
+        order: -1;
+        padding: 0;
+        text-transform: uppercase;
+    }
+    &__title {
+        font-size: 2.2rem;
+        margin: 0 0 5px 0;
+        padding: 0;
+    }
+    &__time {
+        font-size: 1.5rem;
+        padding-bottom: 10px;
+    }
+    &__status--live,
+    &__status--soon {
+        align-self: flex-start;
+        border: 1px solid $red;
+        color: $green-bright;
+        display: inline-block;
+        font-size: 1.5rem;
+        margin: 0 0 10px 0;
+        padding: 0 5px;
+        text-transform: uppercase;
+    }
+    &__img {
+        display: block;
+        width: 100%;
+    }
+    &__timezone-msg {
+        font-size: 1.6rem;
+        font-weight: bold;
+        text-align: left;
+
+        @media screen and (min-width: $medium) {
+            text-align: right;
+        }
+    }
+    &__description {
+        p {
+            font-size: 1.6rem;
+            padding-bottom: 20px;
+        }
+    }
+    &__tags {
+        color: grey;
+        font-size: 1.6rem;
+        padding-bottom: 20px;
+
+    }
+    &__link--secondary {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        overflow: hidden;
+        padding: 5px 12px;
+        position: relative;
+        text-transform: uppercase;
+        transition: all ease 0.3s;
+        
+        &:hover,
+        &:focus {
+            text-decoration: none;
+        }
+
+        &::before {
+            background-color: rgba(255, 255, 255, 0.2);
+            content: '';
+            height: 50px;
+            position: absolute;
+            right: -10px;
+            transform: skew(-20deg);
+            width: 55px;
+        }
+
+        &::after {
+            background-image: url("data:image/svg+xml,%3Csvg width='305' height='498' viewBox='0 0 305 498' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M26.752 26.748L0.00500488 53.496L97.753 151.248L195.501 249L97.751 346.754L0 444.509L26.964 471.459C41.795 486.282 54.283 498.075 54.717 497.665C55.15 497.256 111.417 441.026 179.754 372.711L304.004 248.502L179.756 124.251C111.42 55.913 55.056 0 54.504 0C53.952 0 41.464 12.037 26.752 26.748Z' fill='white'/%3E%3C/svg%3E");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            content: '';
+            display: inline-block;
+            height: 18px;
+            margin: 0 0 0 50px;
+            width: 11px;
+        }
+    }
+
+    // Live events
+    &__event--present {
+        .events-schedule__status {
+            margin-right: 7px;
+        }
+        .events-schedule__img-wrapper {
+            position: relative;
+        }
+        .events-schedule__link--primary {
+            display: none;
+        }
+    }
+
+    // Future events
+    &__event--future {
+        .events-schedule__link--secondary {
+            display: none;
+        }
+    }
+}

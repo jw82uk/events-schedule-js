@@ -1,0 +1,87 @@
+.slick-slider {
+    &.slick-dotted {
+        padding-bottom: 60px;
+    }
+}
+
+.slick-arrow {
+    height: 50px;
+    transition: all 0.3s ease;
+    width: 50px;
+    z-index: 1;
+
+    &:before {
+        bottom: 0;
+        // Pink arrow
+        background-image: url("data:image/svg+xml,%3Csvg width='513' height='499' viewBox='0 0 513 499' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M26.752 26.748L0.005 53.496L97.753 151.248L195.501 249L97.751 346.754L0 444.509L27.006 471.501L54.011 498.493L178.757 373.747L303.503 249.001L179.006 124.501C110.532 56.025 54.281 0 54.004 0C53.727 0 41.464 12.037 26.752 26.748ZM234.752 26.748L208.005 53.496L305.753 151.248L403.501 249L305.751 346.754L208 444.509L234.964 471.459C249.795 486.282 262.283 498.075 262.717 497.665C263.15 497.256 319.417 441.026 387.754 372.711L512.004 248.502L387.756 124.251C319.42 55.913 263.056 0 262.504 0C261.952 0 249.464 12.037 234.752 26.748Z' fill='%23ff5185'/%3E%3C/svg%3E");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        content: '';
+        left: 0;
+        opacity: 1;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transition: all ease 0.3s;
+    }
+
+    &:hover,
+    &:focus {
+        &:before {
+            // Purple arrow
+            background-image: url("data:image/svg+xml,%3Csvg width='513' height='499' viewBox='0 0 513 499' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M26.752 26.748L0.005 53.496L97.753 151.248L195.501 249L97.751 346.754L0 444.509L27.006 471.501L54.011 498.493L178.757 373.747L303.503 249.001L179.006 124.501C110.532 56.025 54.281 0 54.004 0C53.727 0 41.464 12.037 26.752 26.748ZM234.752 26.748L208.005 53.496L305.753 151.248L403.501 249L305.751 346.754L208 444.509L234.964 471.459C249.795 486.282 262.283 498.075 262.717 497.665C263.15 497.256 319.417 441.026 387.754 372.711L512.004 248.502L387.756 124.251C319.42 55.913 263.056 0 262.504 0C261.952 0 249.464 12.037 234.752 26.748Z' fill='%238300cf'/%3E%3C/svg%3E");
+        }
+    }
+
+    &.slick-prev {
+        left: -90px;
+
+        &:before {
+            transform: rotate(180deg);
+        }
+
+        &:hover,
+        &:focus {
+            left: -95px;
+        }
+    }
+
+    &.slick-next {
+        right: -90px;
+
+        &:hover,
+        &:focus {
+            right: -95px;
+        }
+    }
+}
+
+
+.slick-dots {
+    bottom: 0px;
+}
+
+.slick-dots li.slick-active button {
+    &:before {
+        color: $pink;
+        opacity: 1;
+        transition: all ease 0.3s;
+    }
+}
+
+.slick-dots li button {
+    &:before {
+        color: white;
+        font-size: 16px;
+        opacity: 1;
+        transition: all ease 0.3s;
+    }
+
+    &:hover,
+    &:focus {
+        &:before {
+            color: $purple;
+        }
+    }
+}

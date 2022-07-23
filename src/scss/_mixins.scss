@@ -1,0 +1,13 @@
+// Required styles for text with colour gradient
+@mixin text-gradients {
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-box-decoration-break: clone;
+}
+
+// Drop shadow
+@mixin drop-shadow {
+    -webkit-box-shadow: 0px 0px 20px 10px rgba(0,0,0,0.1); 
+    box-shadow: 0px 0px 20px 10px rgba(0,0,0,0.1);
+}

@@ -1,0 +1,48 @@
+.es-upcoming {
+    .events-schedule {
+        padding: 50px 0 0 0;
+        
+        &__events-wrapper {
+            display: grid;
+            gap: 30px;
+            grid-template-columns: 1fr;
+
+            @media screen and (min-width: $medium) {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        &__timezone-msg {
+            padding-bottom: 20px
+        }
+        &__event {
+            @include drop-shadow;
+            border-bottom-left-radius: 50px;
+            border-top: 10px solid $purple;
+            border-top-right-radius: 50px;
+            padding: 30px;
+            
+
+            &--liveshow {
+                border-color: $green-turquoise;
+            }
+            &--seminar {
+                border-color: $blue;
+            }
+            &--lecture {
+                border-color: $purple;
+            }
+            &--tour {
+                border-color: $red;
+            }
+            &--workshop {
+                border-color: $blue-light;
+            }
+            &--stand-upcomedy {
+                border-color: $pink;
+            }
+        }
+        &__tags {
+            font-style: italic;
+        }
+    }
+}

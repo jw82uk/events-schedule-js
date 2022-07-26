@@ -5,7 +5,7 @@ License: MIT
 Credits: Yaphi Berhanu (get-url-params function, from Stack Overflow), Dominic P (update-query-string function, , from Stack Overflow)
 */
 
-function eventSchedule(userSettings) {
+function eventsSchedule(userSettings) {
 
     let defaultSettings = {
         auto_update_time: 0, // INTEGER | In seconds, how often should the events reload? Setting to 0 disables auto update. 
@@ -23,6 +23,7 @@ function eventSchedule(userSettings) {
         no_events_msg_html: '<p class="events-schedule__no-events-msg">There are no events to display.</p>', // STRING | Modify as appropriate. If not required, leave empty ('') and no message will display
         only_events_tagged: [], // ARRAY | If you provide an array of tags (e.g. ['cats', 'dogs', 'birds']), then only the events with one or more of those tags will display
         order_chronological: true, // BOOLEAN | If false, events are ordered as they are in the JSON file
+        prevent_json_caching: true, // BOOLEAN | If true, a random number is appended to the end of the JSON path to prevent browser caching of the JSON file if the events schedule reloads.
         query_string_key: '', // STRING | If you want the events to be filterable (based on tags) then you need to provide a unique key for the url's query string. The query string will comprise a key (i.e. the word you choose for query_string_key) and a value (i.e. a tag name). For example, the url www.webpage.com?interest=arts will only show events tagged with 'arts' if the query_string_key is 'interest'. 
         show_descriptions: true, // BOOLEAN
         show_event_types: true, // BOOLEAN
@@ -44,7 +45,7 @@ function eventSchedule(userSettings) {
         time_zone: '', // STRING | An IANA time zone name e.g. 'Europe/London' or 'America/New_York' etc. See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List This will force the event times to display in the specified time zone and NOT in the users' local time zone. Leave empty ('') to default to the users' local time zone. Do NOT specify a time zone if you need to support IE 11.
         timezone_abbr: '', // STRING | If an IANA time zone has been specified, optionally include a time zone abbreviation (e.g. BST or EST) which will be appended to the event times. Leave this blank ('') if an IANA time zone has NOT been specified.
         timezone_msg_html: '<p class="events-schedule__timezone-msg">All event times are in your local time</p>', // STRING | Modify as appropriate. If not required, leave empty ('') and no message will display.
-        afterEventsLoad: function () { }, // FUNCTION | A callback function to run each time the event schedule gets created (or recreated if auto update is enabled or if the event schedule gets filtered). This won't get called if there are no events to display.
+        afterEventsLoad: function () { }, // FUNCTION | A callback function to run each time the events schedule gets created (or recreated if auto update is enabled or if the events schedule gets filtered). This won't get called if there are no events to display.
     }
 
     // Merge user provided settings with default settings
@@ -96,6 +97,9 @@ function eventSchedule(userSettings) {
     // Events container element
     const eventsContainer = document.getElementById(settings.container_id);
 
+    // Path to JSON file
+    const eventsJsonPath = settings.prevent_json_caching ? settings.json_path + '?' + Math.random() : settings.json_path;
+
     // Create an XMLHttpRequest object
     let theEvents = new XMLHttpRequest();
 
@@ -110,7 +114,7 @@ function eventSchedule(userSettings) {
             eventsObj = JSON.parse(theEvents.responseText);
 
             // Create the events schedule
-            createEventSchedule();
+            createEventsSchedule();
 
             // Update the select menu
             updateSelectMenu();
@@ -118,14 +122,14 @@ function eventSchedule(userSettings) {
     };
 
     // Open a request
-    theEvents.open('GET', settings.json_path + '?' + Math.random()); // Random number added to prevent caching
+    theEvents.open('GET', eventsJsonPath);
 
     // Send the request
     theEvents.send();
 
 
-    // CREATE EVENT SCHEDULE
-    function createEventSchedule() {
+    // CREATE EVENTS SCHEDULE
+    function createEventsSchedule() {
 
         // ##############################################################
         // DETERMINE STATUS OF EVENTS
@@ -317,7 +321,7 @@ function eventSchedule(userSettings) {
         // ADD CLASS TO CONTAINER ELEMENT
         eventsContainer.classList.add('events-schedule');
 
-        // OUTPUT EVENT SCHEDULE
+        // OUTPUT EVENTS SCHEDULE
         if (relevantEventsCount > 0) {
 
             let output = '';
@@ -387,7 +391,7 @@ function eventSchedule(userSettings) {
         
         const time = settings.auto_update_time * 1000;
         
-        setInterval(createEventSchedule, time);
+        setInterval(createEventsSchedule, time);
     }
 
 
@@ -525,10 +529,10 @@ function eventSchedule(userSettings) {
 
             // Update the URL
             let newUrl = update_query_string(window.location.href, settings.query_string_key, this.value);
-            history.pushState({ id: 'Event Schedule' }, 1, newUrl);
+            history.pushState({ id: 'Events Schedule' }, 1, newUrl);
 
             // Recreate the events
-            createEventSchedule();
+            createEventsSchedule();
 
         });
     }

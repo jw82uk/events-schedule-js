@@ -21,7 +21,7 @@ https://jw82uk.github.io/events-schedule-js/
 
 ### Background
 
-I created this script at the beginning of the COVID-19 pandemic when my organisation's planned in-person events needed to go virtual and an online schedule was required. The script was originally developed for a specific use case and fulfilled its purpose, but I thought that, with the addition of some extra configuration options, it might still be useful for others.
+I created the first version of this script at the beginning of the COVID-19 pandemic when my organisation's planned in-person events needed to go virtual and an online schedule was required. It was developed for a specific use case and fulfilled its purpose, but I thought that, with the addition of some extra configuration options, it might still be useful for others.
 
 ### Future
 
@@ -29,7 +29,7 @@ I created this script at the beginning of the COVID-19 pandemic when my organisa
 
  ### License
 
- MIT License. See the included LICENSE.txt file for full details.
+ MIT License. See the included LICENSE file for full details.
 
  ### Disclaimer
 
@@ -177,6 +177,7 @@ These are all of the options available and their default values.
             no_events_msg_html: '<p class="events-schedule__no-events-msg">There are no events to display.</p>', // STRING | Modify as appropriate. If not required, leave empty ('') and no message will display
             only_events_tagged: [], // ARRAY | If you provide an array of tags (e.g. ['cats', 'dogs', 'birds']), then only the events with one or more of those tags will display
             order_chronological: true, // BOOLEAN | If false, events are ordered as they are in the JSON file
+            prevent_json_caching: true, // BOOLEAN | If true, a random number is appended to the end of the JSON path to prevent browser caching of the JSON file if the events schedule reloads.
             query_string_key: '', // STRING | If you want the events to be filterable (based on tags) then you need to provide a unique key for the url's query string. The query string will comprise a key (i.e. the word you choose for query_string_key) and a value (i.e. a tag name). For example, the url www.webpage.com?interest=arts will only show events tagged with 'arts' if the query_string_key is 'interest'. 
             show_descriptions: true, // BOOLEAN
             show_event_types: true, // BOOLEAN
@@ -198,7 +199,7 @@ These are all of the options available and their default values.
             time_zone: '', // STRING | An IANA time zone name e.g. 'Europe/London' or 'America/New_York' etc. See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List This will force the event times to display in the specified time zone and NOT in the users' local time zone. Leave empty ('') to default to the users' local time zone. Do NOT specify a time zone if you need to support IE 11.
             timezone_abbr: '', // STRING | If an IANA time zone has been specified, optionally include a time zone abbreviation (e.g. BST or EST) which will be appended to the event times. Leave this blank ('') if an IANA time zone has NOT been specified.
             timezone_msg_html: '<p class="events-schedule__timezone-msg">All event times are in your local time</p>', // STRING | Modify as appropriate. If not required, leave empty ('') and no message will display.
-            afterEventsLoad: function () { }, // FUNCTION | A callback function to run each time the event schedule gets created (or recreated if auto update is enabled or if the event schedule gets filtered). This won't get called if there are no events to display.
+            afterEventsLoad: function () { }, // FUNCTION | A callback function to run each time the events schedule gets created (or recreated if auto update is enabled or if the events schedule gets filtered). This won't get called if there are no events to display.
         });
     }
 </script>

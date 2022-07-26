@@ -12,7 +12,7 @@ Version: 1.0
 License: MIT
 Credits: Yaphi Berhanu (get-url-params function, from Stack Overflow), Dominic P (update-query-string function, , from Stack Overflow)
 */
-function eventSchedule(userSettings) {
+function eventsSchedule(userSettings) {
   var defaultSettings = {
     auto_update_time: 0,
     // INTEGER | In seconds, how often should the events reload? Setting to 0 disables auto update. 
@@ -44,6 +44,8 @@ function eventSchedule(userSettings) {
     // ARRAY | If you provide an array of tags (e.g. ['cats', 'dogs', 'birds']), then only the events with one or more of those tags will display
     order_chronological: true,
     // BOOLEAN | If false, events are ordered as they are in the JSON file
+    prevent_json_caching: true,
+    // BOOLEAN | If true, a random number is appended to the end of the JSON path to prevent browser caching of the JSON file if the events schedule reloads.
     query_string_key: '',
     // STRING | If you want the events to be filterable (based on tags) then you need to provide a unique key for the url's query string. The query string will comprise a key (i.e. the word you choose for query_string_key) and a value (i.e. a tag name). For example, the url www.webpage.com?interest=arts will only show events tagged with 'arts' if the query_string_key is 'interest'. 
     show_descriptions: true,
@@ -86,7 +88,7 @@ function eventSchedule(userSettings) {
     // STRING | If an IANA time zone has been specified, optionally include a time zone abbreviation (e.g. BST or EST) which will be appended to the event times. Leave this blank ('') if an IANA time zone has NOT been specified.
     timezone_msg_html: '<p class="events-schedule__timezone-msg">All event times are in your local time</p>',
     // STRING | Modify as appropriate. If not required, leave empty ('') and no message will display.
-    afterEventsLoad: function afterEventsLoad() {} // FUNCTION | A callback function to run each time the event schedule gets created (or recreated if auto update is enabled or if the event schedule gets filtered). This won't get called if there are no events to display.
+    afterEventsLoad: function afterEventsLoad() {} // FUNCTION | A callback function to run each time the events schedule gets created (or recreated if auto update is enabled or if the events schedule gets filtered). This won't get called if there are no events to display.
 
   }; // Merge user provided settings with default settings
 
@@ -131,7 +133,9 @@ function eventSchedule(userSettings) {
 
   var urlParamValue = ''; // Events container element
 
-  var eventsContainer = document.getElementById(settings.container_id); // Create an XMLHttpRequest object
+  var eventsContainer = document.getElementById(settings.container_id); // Path to JSON file
+
+  var eventsJsonPath = settings.prevent_json_caching ? settings.json_path + '?' + Math.random() : settings.json_path; // Create an XMLHttpRequest object
 
   var theEvents = new XMLHttpRequest(); // Create a callback function
 
@@ -142,19 +146,18 @@ function eventSchedule(userSettings) {
       // Convert JSON string into a JavaScript object and store in 'eventsObj' variable
       eventsObj = JSON.parse(theEvents.responseText); // Create the events schedule
 
-      createEventSchedule(); // Update the select menu
+      createEventsSchedule(); // Update the select menu
 
       updateSelectMenu();
     }
   }; // Open a request
 
 
-  theEvents.open('GET', settings.json_path + '?' + Math.random()); // Random number added to prevent caching
-  // Send the request
+  theEvents.open('GET', eventsJsonPath); // Send the request
 
-  theEvents.send(); // CREATE EVENT SCHEDULE
+  theEvents.send(); // CREATE EVENTS SCHEDULE
 
-  function createEventSchedule() {
+  function createEventsSchedule() {
     // ##############################################################
     // DETERMINE STATUS OF EVENTS
     // Is each event in the past, present, or future?
@@ -309,7 +312,7 @@ function eventSchedule(userSettings) {
     } // ADD CLASS TO CONTAINER ELEMENT
 
 
-    eventsContainer.classList.add('events-schedule'); // OUTPUT EVENT SCHEDULE
+    eventsContainer.classList.add('events-schedule'); // OUTPUT EVENTS SCHEDULE
 
     if (relevantEventsCount > 0) {
       var output = '';
@@ -367,7 +370,7 @@ function eventSchedule(userSettings) {
 
   if (settings.auto_update_time) {
     var time = settings.auto_update_time * 1000;
-    setInterval(createEventSchedule, time);
+    setInterval(createEventsSchedule, time);
   } // 
   // BUILD EVENTS
   // eventPos is the index position of the event in eventsObj
@@ -485,10 +488,10 @@ function eventSchedule(userSettings) {
       // Update the URL
       var newUrl = update_query_string(window.location.href, settings.query_string_key, this.value);
       history.pushState({
-        id: 'Event Schedule'
+        id: 'Events Schedule'
       }, 1, newUrl); // Recreate the events
 
-      createEventSchedule();
+      createEventsSchedule();
     });
   }
   /*

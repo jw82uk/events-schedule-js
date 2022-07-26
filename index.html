@@ -173,12 +173,13 @@
         window.addEventListener('load', function () {
 
             // Live events
-            eventSchedule({
+            eventsSchedule({
                 container_id: 'js-esc-live',
                 events_wrapper_class: 'carousel-live',
                 events_wrapper_html_element: 'div',
                 events_html_element: 'div',
                 json_path: 'assets/json/events.json',
+                prevent_json_caching: false,
                 show_descriptions: false,
                 show_upcoming_events: false,
                 show_no_of_events_msg: false,
@@ -209,7 +210,7 @@
             });
 
             // All events
-            eventSchedule({
+            eventsSchedule({
                 container_id: 'js-esc-standard',
                 descriptor_current_event: 'Live',
                 descriptor_starting_soon: 'Soon to start',
@@ -223,7 +224,7 @@
             });
 
             // Tagged events
-            eventSchedule({
+            eventsSchedule({
                 container_id: 'js-esc-tagged',
                 events_html_element: 'div',
                 events_wrapper_html_element: 'div',
@@ -258,7 +259,7 @@
             });
 
             // Upcoming events
-            eventSchedule({
+            eventsSchedule({
                 container_id: 'js-esc-upcoming',
                 filter_id: 'events-upcoming-select',
                 json_path: 'assets/json/events.json',
